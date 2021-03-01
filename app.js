@@ -6,7 +6,6 @@ const client = contentful.createClient({
     accessToken: "SO59ehfFhazLF6igUo6AIdwsb3tJOsWfDEFrJ1c8lyQ"
 });
 
-
 // Variables
 const cartBtn = document.querySelector('.cart-btn');
 const closeCartBtn = document.querySelector('.close-cart');
