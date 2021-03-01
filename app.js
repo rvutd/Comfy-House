@@ -27,7 +27,6 @@ let buttonsDOM = [];
 class Products {
     async getProducts(){
         try {
-
             let contentful = await client.getEntries({
                 // get Specipic Content Data
                 content_type: "comfyHouseProduct" // Product ID
@@ -230,8 +229,6 @@ class UI {
     getSingleButton(id){
         return buttonsDOM.find(button => button.dataset.id === id);
     }
-
-
 }
 
 // Local Storage
@@ -276,4 +273,3 @@ document.addEventListener('DOMContentLoaded', ()=> {
         ui.cartLogic();
     });
 });
-
