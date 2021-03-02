@@ -7,7 +7,7 @@
     <title>Comfy House</title>
     <!-- CSS --> 
     <link rel="stylesheet" href="main.css">
-    
+    <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
@@ -25,6 +25,27 @@
             </div>
         </div>
     </nav>
+
+    <!-- Side Menu -->
+    <div class="menu-overlay">
+        <div class="menu">
+            <span class="close-menu">
+                <i class="fas fa-window-close"></i>
+                <h2>Your Menu</h2>
+            </span>
+            
+            <!-- Menu Content -->
+            <div class="menu-content">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home.html">Menu</a></li>
+                    <li><a href="home.html">Sign Up</a></li>
+                    <li><a href="home.html">Sign In</a></li>
+                </ul>
+            </div>
+        </div>        
+    </div>
+
 
     <!-- Hero -->
     <header class="hero">
@@ -84,6 +105,7 @@
             <div class="cart-footer">
                 <h3>your total : $ <span class="cart-total">0</span></h3>
                 <button class="clear-cart banner-btn">clear cart</button>
+                <button class="check-out banner-btn">Check Out</button>
             </div>
         </div>
     </div>
@@ -92,6 +114,7 @@
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
     <!-- App.js -->
     <script src="app.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

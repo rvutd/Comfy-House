@@ -1,26 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
-
-:root {
-    --primaryColor: #f09d51;
-    --mainWhite: #fff;
-    --mainBlack: #222;
-    --mainGrey: #ececec;
-    --mainSpacing: 0.1rem;
-    --mainTransition: all 0.3s linear;
+/* ------------------ Menu Bar ------------------ */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgb(240, 157, 81, 0.5);
+    z-index: 2;
+    visibility: hidden;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(-100%);
 }
 
-body {
+/* Show Manu */
+.showMenu { transform: translateX(0);}
+.transparentMenu { visibility: visible; }
+
+/* Size of Menu */
+@media screen and (min-width: 768px) {
+    .menu {
+        width: 10vw;
+        min-width: 250px;
+    }
+}
+/* Hide Menu */
+.close-menu { 
+    display: flex;
+    align-items: center;
+}
+
+.menu-overlay .fa-window-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-right: 1.5rem;
+}
+
+/* Menu Bar & Content */
+.fa-bars {
+    cursor: pointer;
+}
+
+.menu-content, menu span {
+    display: grid;
+    justify-content: center;
+}
+
+.menu-overlay ul { list-style-type: none; }
+
+.menu-overlay li { margin: 1rem 0; }
+
+.menu-overlay a {
+    text-decoration: none;
     color: var(--mainBlack);
-    background: var(--mainWhite);
-    font-family: "Lato", sans-serif;
-
+    font-size: 1.5rem;
+    transition: var(--mainTransition);
 }
 
+.menu-overlay a:hover { color: var(--primaryColor);}
+/* End Of Side Menu Section */
+
+.flex {
+    display: flex;
+}
 
 
