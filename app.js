@@ -126,6 +126,7 @@ class UI {
         cartItems.innerText = itemsTotal;
     }
 
+    // Add To Cart clicked -> generates this code -
     addCartItem(item) {
         const div = document.createElement('div');
         div.classList.add('cart-item');
@@ -150,7 +151,8 @@ class UI {
         cartDOM.classList.add('showCart');
     }
 
-    setupAPP() {
+    // Functionality (Open, Close - Cart & Add Product in cart)
+    setupAPP() {    
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populateCart(cart);
@@ -158,6 +160,7 @@ class UI {
         closeCartBtn.addEventListener('click', this.hideCart); 
     }
 
+    // Adds Product In Cart
     populateCart(cart){
         cart.forEach(item => this.addCartItem(item));
     }

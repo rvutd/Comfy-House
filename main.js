@@ -15,4 +15,3 @@ closeMenu.addEventListener('click', (e)=>{
     menu.classList.remove('showMenu');
     menu.classList.remove('transparentMenu');
 });
-
